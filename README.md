@@ -2,6 +2,10 @@
 
 Interface between the BBC micro:bit and the Grove MP3 v2.0.
 
+![micro:bit with Grove MP3 v2.0 and shield](https://geniemob.github.io/microbit-grove-mp3/microbit-grove-mp3-with-shield.jpg)
+
+The above image shows the plug-and-play setup with the [micro:bit](https://microbit.org/) connected to the [Grove MP3 v2.0](https://www.seeedstudio.com/Grove-MP3-v2.0-p-2597.html) via the [Grove shield for micro:bit](https://www.seeedstudio.com/Grove-Shield-for-micro%3Abit-p-2947.html).  With basic tools, it would also be possible to connect the Grove MP3 v2.0 to the micro:bit using three alligator clips.
+
 
 ## hello-mp3.js
 
@@ -24,7 +28,7 @@ Pressing button A will begin (or restart) playback of the 001xxx.mp3 file within
 
 MIT License
 
-Copyright (c) 2018 GenieMob
+Copyright (c) 2018 [GenieMob](http://www.geniemob.ca/)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
