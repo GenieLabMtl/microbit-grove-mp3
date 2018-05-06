@@ -1,6 +1,6 @@
 # microbit-grove-mp3
 
-Interface between the BBC micro:bit and the Grove MP3 v2.0.
+Interface between the __BBC micro:bit__ and the __Grove MP3 v2.0__.
 
 ![micro:bit with Grove MP3 v2.0 and shield](https://geniemob.github.io/microbit-grove-mp3/microbit-grove-mp3-with-shield.jpg)
 
@@ -22,6 +22,22 @@ The hello-mp3.js program is configured to expect:
 On startup, the hello-mp3.js program will select the SD card as a source, set the volume to 24 / 30 and display the 'play' icon on the LEDs.
 
 Pressing button A will begin (or restart) playback of the 001xxx.mp3 file within the 01 folder.
+
+
+## Resources
+
+Seeed provide a [version of the KT403A datasheet](https://raw.githubusercontent.com/SeeedDocument/Grove-MP3_v2.0/master/res/Grove-MP3_v2.0_KT403A_datasheet_V1.3_EN-Recompiled_by_Seeed-.pdf), which specifies the serial commands interpreted by the Grove MP3 v2.0 module.  In short, all communication is in 8-byte messages at __9600 baud__.  The message structure is as follows:
+
+| Byte | Value | Function                                           |
+|:----:|:-----:| -------------------------------------------------- |
+| 0    | 0x7e  | Start command                                      |
+| 1    | 0xff  | Version info                                       |
+| 2    | 0x06  | Message length                                     |
+| 3    |       | Command (see datasheet for list of commands)       |
+| 4    | 0x00  | No serial reply requested                          |
+| 5    |       | High byte of command data (DH)                     |
+| 6    |       | Low byte of command data (DL)                      |
+| 7    | 0xef  | End command                                        |
 
 
 ## License
